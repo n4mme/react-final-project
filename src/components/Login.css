@@ -1,0 +1,263 @@
+/* Background */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #eff6ff, #e0e7ff);
+}
+
+/* Card */
+.login-card {
+  background: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Logo */
+.login-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.login-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+}
+
+.text-indigo {
+  color: #4f46e5;
+}
+
+.text-blue {
+  color: #60a5fa;
+  opacity: 0.9;
+  font-size: 1.75rem;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Input Group */
+.input-group {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  color: #4f46e5;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 2.25rem;
+  border: 1px solid #818cf8;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+  box-shadow: 0 0 0 3px #c7d2fe;
+}
+
+/* Show password */
+.show-password {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.65rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.2s;
+}
+
+.show-password:hover {
+  color: #4f46e5;
+}
+
+/* Options */
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #4b5563;
+}
+
+.remember-me input {
+  accent-color: #4f46e5;
+}
+
+.forgot-password {
+  color: #4f46e5;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn-signin {
+  width: 100%;
+  background: #4f46e5;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-signin:hover {
+  background: #4338ca;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.divider div {
+  flex-grow: 1;
+  border-top: 1px solid #d1d5db;
+}
+
+.divider span {
+  margin: 0 0.75rem;
+}
+
+/* Google Button */
+.btn-google {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background: white;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-google:hover {
+  background: #f9fafb;
+}
+
+.btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: 8px;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.btn-google:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.google-icon {
+  width: 20px;   /* perfect size */
+  height: 20px;
+}
+
+
+/* Sign up link */
+.signup-text {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-top: 1.5rem;
+}
+
+.signup-link {
+  color: #4f46e5;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Popup Message */
+.popup-message {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  animation: fadeInOut 3s ease;
+  z-index: 999;
+}
+
+.popup-success {
+  background: #e8f5e9;
+  color: #2c6e49;
+  border: 1px solid #8ab17d;
+}
+
+.popup-error {
+  background: #fdecea;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+}
+
+.popup-icon {
+  flex-shrink: 0;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+}
+
